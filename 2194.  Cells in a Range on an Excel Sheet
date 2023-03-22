@@ -1,0 +1,19 @@
+class Solution {
+    public List<String> cellsInRange(String s) {
+        char col1 = s.charAt(0);	2194	
+Cells in a Range on an Excel Sheet
+        char col2 = s.charAt(3);
+
+        int  row1 = Character. getNumericValue(s.charAt(1));
+        int  row2 = Character. getNumericValue(s.charAt(4));
+
+        ArrayList<String> ans = new ArrayList<>();
+         for(char c = col1;c <=col2;c++){
+             for(int i = row1;i<=row2;i++){
+                 ans.add(c + String.valueOf(i));
+             }
+         }
+        return ans;
+
+    }
+}
